@@ -27,6 +27,7 @@ public class Request {
     private int templateId;
     private int productCode;
     private int smsCode;
+    private long currentTime;
 
     @Override
     public String toString() {

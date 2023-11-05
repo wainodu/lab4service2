@@ -83,7 +83,7 @@ public class MyController {
             return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
         }
         modifyResponseService.modify(response);
-
+        log.info("time spent: {} milliseconds", System.currentTimeMillis() - request.getCurrentTime());
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
